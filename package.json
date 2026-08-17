@@ -1,0 +1,36 @@
+{
+  "name": "oikos-dealership-analyzer",
+  "productName": "OIKOS Dealership Profit Analyzer",
+  "version": "0.1.0",
+  "description": "Offline break-even and profit decision tool for a car dealership.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/calculations.test.js",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.oikos.dealership-analyzer",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "node_modules/chart.js/dist/chart.umd.js"
+    ],
+    "directories": { "output": "build" },
+    "win": { "target": ["nsis"] },
+    "mac": { "target": ["dmg"], "category": "public.app-category.business" },
+    "linux": { "target": ["AppImage"], "category": "Office" }
+  }
+}
