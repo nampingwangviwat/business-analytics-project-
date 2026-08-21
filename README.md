@@ -1,4 +1,4 @@
-# OIKOS — Dealership Profit Analyzer
+# LOGAS — Dealership Profit Analyzer
 
 Offline desktop tool that answers one question for a dealership manager:
 **change a number, and see what happens to profit and to the number of cars you need to sell.**
